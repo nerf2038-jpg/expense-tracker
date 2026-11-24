@@ -12,7 +12,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
-DEFAULT_FILE = "expenses.csv"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DEFAULT_FILE = os.path.join(BASE_DIR, "data", "expenses.csv")
 
 
 def setup_chinese_font():
