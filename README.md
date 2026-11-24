@@ -43,8 +43,20 @@ Menu:
 ### 2. Draw the pie chart (Visualization module)
 
 ```bash
-python expense_chart.py
+python expense_chart.py              # read data/expenses.csv and draw the pie chart
+python expense_chart.py -m 2026-11   # only include expenses in Nov 2026
 ```
+
+Options:
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `-f`, `--file` | Path to the CSV data file | `data/expenses.csv` |
+| `-o`, `--output` | Output image file name | `pie_chart.png` |
+| `-m`, `--month` | Only include a given month (`YYYY-MM`) | all data |
+| `--no-show` | Save the image without opening a window | off |
+
+The chart is saved as `pie_chart.png`. Each slice shows the percentage and amount, and the legend lists each category's total.
 
 <!-- Member B: describe options / output file here -->
 
@@ -61,7 +73,7 @@ python expense_chart.py
 
 ## Sample Pie Chart
 
-<!-- Member B: add screenshot, e.g. ![Pie chart](docs/pie_chart.png) -->
+![Pie chart](pie_chart.png)
 
 ## Team
 
